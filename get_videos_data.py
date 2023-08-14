@@ -1,5 +1,5 @@
-from apiclient.discovery import build
-from config import API_KEY, USER_CHANNEL_ID
+from googleapiclient.discovery import build
+from config import API_KEY
 
 def get_channel_videos(channel_id, youtube):
     res = youtube.channels().list(id=channel_id, 
@@ -21,20 +21,12 @@ def get_channel_videos(channel_id, youtube):
             break  
     return videos
 
-def get_video_id(video_data):
-    return video_data['snippet']['resourceId']['videoId']
-
 def get_video_title(video_data):
     return video_data['snippet']['title']
 
 def get_video_url(video_data):
     video_id = video_data['snippet']['resourceId']['videoId']
     return f"https://www.youtube.com/watch?v={video_id}"
-
-def get_videos_ids(channel_id, youtube):
-    videos = get_channel_videos(channel_id, youtube)
-    video_ids = [get_video_id(video) for video in videos]
-    return video_ids
 
 def get_videos_titles(channel_id, youtube):
     videos = get_channel_videos(channel_id, youtube)

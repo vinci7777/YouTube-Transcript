@@ -8,7 +8,7 @@ Base = declarative_base()
 class Video(Base):
     __tablename__ = 'videos'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String)
     url = Column(String)
 
