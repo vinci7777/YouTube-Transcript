@@ -3,8 +3,11 @@
 Before running the project please make sure you run these:
 
 _pip install psycopg2
+
 pip install SQLAlchemy
+
 pip install youtube-transcript-api
+
 pip install google-api-python-client_
 
 Also, please remember to update the values of variables in the **config.py** file.
