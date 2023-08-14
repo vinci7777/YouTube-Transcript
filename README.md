@@ -10,6 +10,8 @@ pip install youtube-transcript-api
 
 pip install google-api-python-client
 
+
+
 Also, please remember to update the values of variables in the **config.py** file.
 
 If you are not able to find the user's channel id, you can convert the channel's username to id here: _https://commentpicker.com/youtube-channel-id.php._
