@@ -10,7 +10,7 @@ class Video(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String)
-    url = Column(String)
+    url = Column(String, unique=True)
 
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
